@@ -108,3 +108,74 @@ button {
 button:hover {
     background-color: #218838;
 }
+/* Make game grid responsive */
+@media (max-width: 768px) {
+    .game-container {
+        grid-template-columns: repeat(4, 20vw);
+        grid-template-rows: repeat(4, 20vw);
+        width: 90vw;
+        gap: 5px;
+    }
+
+    .card {
+        width: 20vw;
+        height: 20vw;
+        font-size: 8vw;
+    }
+
+    h1 {
+        font-size: 6vw;
+    }
+
+    p {
+        font-size: 5vw;
+    }
+
+    button {
+        font-size: 4vw;
+        padding: 10px;
+    }
+
+    #win-message {
+        font-size: 6vw;
+        padding: 10px;
+        width: 80%;
+    }
+}
+
+/* For very small screens (phones) */
+@media (max-width: 480px) {
+    .game-container {
+        grid-template-columns: repeat(4, 22vw);
+        grid-template-rows: repeat(4, 22vw);
+    }
+
+    .card {
+        width: 22vw;
+        height: 22vw;
+        font-size: 10vw;
+    }
+
+    h1 {
+        font-size: 7vw;
+    }
+
+    p {
+        font-size: 6vw;
+    }
+
+    button {
+        font-size: 5vw;
+        padding: 12px;
+    }
+
+    #win-message {
+        font-size: 7vw;
+    }
+}
+
+/* Prevent unwanted zooming on mobile */
+body {
+    touch-action: manipulation;
+}
+
